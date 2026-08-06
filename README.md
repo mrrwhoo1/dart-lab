@@ -8,7 +8,7 @@ Each folder is a self-contained mini-project — mostly CLI tools — focused on
 
 | Project | Concepts practiced |
 |---|---|
-
+| [WeatherConverter](./WeatherConverter) | functions, RegExp, string parsing, nullable types, switch-like conditionals |
 
 *(table updated as projects are added)*
 
