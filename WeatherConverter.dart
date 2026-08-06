@@ -3,7 +3,7 @@ import 'dart:io';
 String c_to_k(String value) {
   if (value.toUpperCase().contains('K')) {
     String clean = value.replaceAll(
-      RegExp(r'[^0-9]'),
+      RegExp(r'[^0-9.-]'),
       '',
     ); //removes letters and spaces.
     double? temp = double.tryParse(clean);
@@ -15,7 +15,7 @@ String c_to_k(String value) {
     }
   } else if (value.toUpperCase().contains('C')) {
     String clean = value.replaceAll(
-      RegExp(r'[^0-9]'),
+      RegExp(r'[^0-9.-]'),
       '',
     ); //removes letters and spaces.
     double? temp = double.tryParse(clean);
@@ -32,7 +32,7 @@ String c_to_k(String value) {
 
 String c_to_f(String value) {
   if (value.toUpperCase().contains("C")) {
-    String clean = value.replaceAll(RegExp(r'[^0-9]'), '');
+    String clean = value.replaceAll(RegExp(r'[^0-9.-]'), '');
     double? temp = double.tryParse(clean);
     if (temp == null)
       return 'Invalid input';
@@ -41,7 +41,7 @@ String c_to_f(String value) {
       return "${f.toStringAsFixed(2)}°F";
     }
   } else if (value.toUpperCase().contains("F")) {
-    String clean = value.replaceAll(RegExp(r'[^0-9]'), '');
+    String clean = value.replaceAll(RegExp(r'[^0-9.-]'), '');
     double? temp = double.tryParse(clean);
     if (temp == null)
       return 'Invalid input';
@@ -56,7 +56,7 @@ String c_to_f(String value) {
 
 String f_to_k(String value) {
   if (value.toUpperCase().contains("F")) {
-    String clean = value.replaceAll(RegExp(r'[^0-9]'), '');
+    String clean = value.replaceAll(RegExp(r'[^0-9.-]'), '');
     double? temp = double.tryParse(clean);
     if (temp == null)
       return 'Invalid input';
@@ -65,13 +65,13 @@ String f_to_k(String value) {
       return "${k.toStringAsFixed(2)} K";
     }
   } else if (value.toUpperCase().contains("K")) {
-    String clean = value.replaceAll(RegExp(r'[^0-9]'), '');
+    String clean = value.replaceAll(RegExp(r'[^0-9.-]'), '');
     double? temp = double.tryParse(clean);
     if (temp == null)
       return 'Invalid input';
     else {
       double f = ((temp - 273.15) * 1.8) + 32;
-      return "${f.toStringAsFixed(2)}°C";
+      return "${f.toStringAsFixed(2)}°F";
     }
   } else {
     return 'Invalid input.';
@@ -103,6 +103,6 @@ void main() {
     }
   } else {
     print("Invalid input!");
-    exit;
+    exit(0);
   }
 }
