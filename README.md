@@ -10,6 +10,7 @@ Each folder is a self-contained mini-project — mostly CLI tools — focused on
 |---|---|
 | [WeatherConverter](weatherconverter/./WeatherConverter.dart) | functions, RegExp, string parsing, nullable types, switch-like conditionals |
 | [RandomGuesser](random_number_guess/./random.dart) | loops, control flow, Random, comparison operators |
+| [RockPaperScissors](rockpaperscissors/./src.dart) | Maps, Lists |
 
 *(table updated as projects are added)*
 
